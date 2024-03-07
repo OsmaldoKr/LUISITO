@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Math - Level 3</title>
+    <title>Luisito Cslb - Level 3</title>
     <link rel="stylesheet" href="/css/levels/lvl3.css">
 </head>
 <body>
     <div class="container">
-        <h1>Kids Math - Level 3</h1>
+        <h1>Luisito Cslb - Level 3</h1>
+        <h2>Multiplicación</h2>
         <div class="problem">
             <p>Si un niño tiene 10 lápices y le regalan 5 más, ¿cuántos lápices tendrá en total?</p>
         </div>
-        <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
-        <button id="calculateBtn" onclick="calculate()">Calcular</button>
-        <div id="result"></div>
+
+        <div class="problem">
+            <p>10 + 5 =</p>
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        
         <button id="NextLevel" onclick="nextLevel()">Siguiente Nivel</button>
         <button id="exitBtn" onclick="goToIndex()">Salir</button>
     </div>
@@ -32,7 +38,7 @@
         }
 
         function goToIndex() {
-            window.location.href = "../../index.html"; // Redirigir al usuario al index
+            window.location.href = "../niveles.html"; // Redirigir al usuario al índice
         }
 
         function nextLevel() {

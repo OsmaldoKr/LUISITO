@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive; /* Fuente estilo videojuego */
-    background-color: #3c3c3c; /* Color de fondo oscuro */
+    background-image: url(/assets/274281acaf11260330e63684f3944d82.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff; /* Color de texto blanco */
     text-align: center;
 }
@@ -21,11 +24,20 @@ h1 {
     text-shadow: 2px 2px 2px #000; /* Sombra de texto */
 }
 
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #000; /* Sombra de texto */
+}
+
 .problem {
-    background-color: #333; /* Color de fondo del problema */
+    background-color: #04498d; /* Color de fondo del problema */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.problem p {
     font-size: 1.2em;
 }
 

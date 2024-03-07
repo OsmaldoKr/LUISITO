@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    
     <div id="welcome-screen" class="container">
-        <h1>Luisito Cslb</h1>
+        <h1>Luisito CSLB</h1>
         <button id="startBtn" onclick="startGame()">Jugar</button>
+        <button id="exitBtn" onclick="exitGame()">Salir</button>
     </div>
     <script>
         function startGame() {
             window.location.href = "/html/niveles.html"; // Redirigir al usuario al juego
+        }
+
+        function exitGame() {
+            window.location.href = "https://www.google.com"; // Redirigir al usuario a Google.com
         }
     </script>
 </body>

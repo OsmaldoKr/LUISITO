@@ -26,6 +26,7 @@ h1 {
 
 button {
     padding: 10px 20px;
+    margin: 10px;
     font-size: 1.5em;
     background-color: #4CAF50; /* Color de fondo del botón */
     color: #fff; /* Color de texto del botón */
@@ -38,3 +39,8 @@ button {
 button:hover {
     background-color: #45a049; /* Cambio de color de fondo al pasar el mouse */
 }
+
+#header {
+    margin-bottom: 20px;
+}
+

@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Math - Level 10</title>
+    <title>Luisito Cslb - Level 10</title>
     <link rel="stylesheet" href="/css/levels/lvl10.css">
 </head>
 <body>
     <div class="container">
-        <h1>Kids Math - Level 10</h1>
+        <h1>Luisito Cslb - Level 10</h1>
+        <h2>División</h2>
         <div class="problem">
-            <p>Si un paquete contiene 36 bolas de ping pong y se reparten igualmente entre 4 jugadores, ¿cuántas bolas recibirá cada jugador?</p>
+            <p>Si tenemos 40 galletas y las repartimos entre 8 amigos de manera equitativa, ¿cuántas galletas recibirá cada amigo?</p>
         </div>
-        <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
-        <button id="calculateBtn" onclick="calculate()">Calcular</button>
-        <div id="result"></div>
+
+        <div class="problem">
+            <p>40 ÷ 8 =</p>
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        
         <button id="NextLevel" onclick="nextLevel()">Siguiente Nivel</button>
         <button id="exitBtn" onclick="goToIndex()">Salir</button>
     </div>
@@ -22,21 +28,21 @@
     <script>
         function calculate() {
             const userAnswer = parseInt(document.getElementById('userAnswer').value);
-            const correctAnswer = 36 / 4;
+            const correctAnswer = 40 / 8;
             const resultDiv = document.getElementById('result');
             if (userAnswer === correctAnswer) {
                 resultDiv.textContent = '¡Correcto!';
             } else {
-                resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + correctAnswer + ' bolas por jugador.';
+                resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + correctAnswer + '.';
             }
         }
 
         function goToIndex() {
-            window.location.href = "../../index.html"; // Redirigir al usuario al index
+            window.location.href = "../niveles.html"; // Redirigir al usuario al índice
         }
 
         function nextLevel() {
-            window.location.href = "./lvl11.html"; // Redirigir al usuario a la página de felicitaciones
+            window.location.href = "./lvl11.html"; // Redirigir al usuario al siguiente nivel
         }
     </script>
 </body>
