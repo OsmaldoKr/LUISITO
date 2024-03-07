@@ -5,6 +5,7 @@ body {
     background-image: url(/assets/274281acaf11260330e63684f3944d82.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     color: #fff; /* Color de texto blanco */
     text-align: center;
 }
