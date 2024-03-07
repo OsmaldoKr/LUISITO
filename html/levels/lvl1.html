@@ -8,13 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Kids Math - Level 1</h1>
+        <h1>Luisito Cslb - Level 1</h1>
+        <h2>Suma</h2>
         <div class="problem">
             <p>Ayer fuimos muchos niños a desayunar al comedor del colegio y nos bebimos todo el zumo. Si se hubiesen servido 470 litros de zumo menos, se habrían servido tantos litros como hoy. Hoy se han servido 910 litros de zumo. ¿Cuántos litros de zumo se sirvieron ayer?</p>
         </div>
-        <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
-        <button id="calculateBtn" onclick="calculate()">Calcular</button>
-        <div id="result"></div>
+
+        <div class="problem">
+            <p>910 + 470 =</p>
+
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        
         <button id="NextLevel" onclick="nextLevel()">Siguiente Nivel</button>
         <button id="exitBtn" onclick="goToIndex()">Salir</button>
         </div>
@@ -25,7 +32,7 @@
             const correctAnswer = 910 + 470;
             const resultDiv = document.getElementById('result');
             if (userAnswer === correctAnswer) {
-                resultDiv.textContent = '¡Correcto!';
+                resultDiv.textContent = '¡Correcto!, puedes avanzar al siguiente nivel';
             } else {
                 resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + correctAnswer + ' litros.';
             }

@@ -12,9 +12,12 @@
         <div class="problem">
             <p>En una caja hay 24 bolígrafos. Si se añaden 14 bolígrafos más, ¿cuántos bolígrafos habrá en total?</p>
         </div>
-        <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
-        <button id="calculateBtn" onclick="calculate()">Calcular</button>
-        <div id="result"></div>
+        <div class="problem"><p>24 + 14 =</p>
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        
         <button id="NextLevel" onclick="nextLevel()">Siguiente Nivel</button>
         <button id="exitBtn" onclick="goToIndex()">Salir</button>
     </div>
@@ -32,7 +35,7 @@
         }
 
         function goToIndex() {
-            window.location.href = "../../index.html"; // Redirigir al usuario al index
+            window.location.href = "../niveles.html"; // Redirigir al usuario al index
         }
 
         function nextLevel() {

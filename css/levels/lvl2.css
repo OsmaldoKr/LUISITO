@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive; /* Fuente estilo videojuego */
-    background-color: #3c3c3c; /* Color de fondo oscuro */
+    background-image: url(/assets/274281acaf11260330e63684f3944d82.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff; /* Color de texto blanco */
     text-align: center;
 }
@@ -22,7 +25,7 @@ h1 {
 }
 
 .problem {
-    background-color: #333; /* Color de fondo del problema */
+    background-color: #04498d; /* Color de fondo del problema */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
