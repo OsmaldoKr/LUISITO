@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 9</title>
+    <link rel="stylesheet" href="/css/levels/lvl9.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 9</h1>
+        <div class="problem">
+            <h2>Suma</h2>
+            <p>Si tienes 15 manzanas y compras otras 10 manzanas más, ¿cuántas manzanas tendrás en total?</p>
+        </div>
+        <div class="problem">
+            <p>15 + 10 =</p>
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const userAnswer = parseInt(document.getElementById('userAnswer').value);
+            const correctAnswer = 15 + 10;
+            const resultDiv = document.getElementById('result');
+            if (userAnswer === correctAnswer) {
+                resultDiv.textContent = '¡Correcto!';
+            } else {
+                resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + correctAnswer + '.';
+            }
+        }
+
+        function goToIndex() {
+            window.location.href = "/html/grados/1to3/niveles.html"; // Redirigir al usuario al index
+        }
+
+        function nextLevel() {
+            window.location.href = "/html/grados/1to3/levels/lvl10.html"; // Redirigir al usuario al siguiente nivel
+        }
+    </script>
+</body>
+</html>

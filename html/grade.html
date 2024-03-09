@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Math</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div id="welcome-screen" class="container">
+        <h1>En qué grado estás?</h1>
+        <button onclick="navigateToGrade1to3()">Primero a Tercero</button>
+        <button onclick="navigateToGrade4to5()">Cuarto y Quinto</button>
+        <button onclick="navigateToGrade6()">Sexto</button>
+        <button onclick="exitApp()">Salir</button>
+    </div>
+    <script>
+        function navigateToGrade1to3() {
+            window.location.href = "/html/grados/1to3/niveles.html"; // Redirigir al usuario a la página para los grados 1-3
+        }
+
+        function navigateToGrade4to5() {
+            window.location.href = "grade4to5.html"; // Redirigir al usuario a la página para los grados 4-5
+        }
+
+        function navigateToGrade6() {
+            window.location.href = "grade6.html"; // Redirigir al usuario a la página para el grado 6
+        }
+
+        function exitApp() {
+            window.location.href = "../"; // Redirigir al usuario a Google.com
+        }
+    </script>
+</body>
+</html>

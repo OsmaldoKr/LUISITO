@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 10</title>
+    <link rel="stylesheet" href="/css/levels/lvl10.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 10</h1>
+        <div class="problem">
+            <h2>Multiplicación</h2>
+            <p>Si cada caja contiene 6 manzanas y tienes 8 cajas, ¿cuántas manzanas tienes en total?</p>
+        </div>
+        <div class="problem">
+            <p>6 x 8 =</p>
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="nextLevel()">Siguiente Grado</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const userAnswer = parseInt(document.getElementById('userAnswer').value);
+            const correctAnswer = 6 * 8;
+            const resultDiv = document.getElementById('result');
+            if (userAnswer === correctAnswer) {
+                resultDiv.textContent = '¡Correcto!';
+            } else {
+                resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + correctAnswer + '.';
+            }
+        }
+
+        function goToIndex() {
+            window.location.href = "/html/grados/4to5/niveles.html"; // Redirigir al usuario al index
+        }
+
+        function nextLevel() {
+            window.location.href = "/html/grados/4to5/levels/lvl1.html"; // Redirigir al usuario al primer nivel del siguiente grado
+        }
+    </script>
+</body>
+</html>
