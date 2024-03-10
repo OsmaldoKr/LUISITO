@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 1 (6to grado)</title>
+    <link rel="stylesheet" href="../../../../css/grade/6/levels.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 1 (6to grado)</h1>
+        <div class="problem">
+            <h2>Fracciones</h2>
+            <p>Resuelve la siguiente operación:</p>
+            <p>¿Cuál es el resultado de sumar 3/4 + 1/3?</p>
+        </div>
+        <div class="form">
+            <label for="numerator1">Numerador:</label>
+            <input type="number" id="numerator1" placeholder="Numerador">
+            <label for="denominator1">Denominador:</label>
+            <input type="number" id="denominator1" placeholder="Denominador">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div class="buttons">
+            <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
+            <button id="exitBtn" onclick="goToIndex()">Salir</button>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const numerator1 = parseInt(document.getElementById('numerator1').value);
+            const denominator1 = parseInt(document.getElementById('denominator1').value);
+            const resultDiv = document.getElementById('result');
+            const correctNumerator = 3 * denominator1 + 1 * denominator1; // Numerador correcto: 3/4 + 1/3 = (3*3 + 1*4) / 12 = 9/12 + 4/12 = 13/12
+            const correctDenominator = 12; // Denominador común
+
+            if (numerator1 === correctNumerator && denominator1 === correctDenominator) {
+                resultDiv.textContent = '¡Correcto!';
+                resultDiv.classList.remove('incorrect');
+                resultDiv.classList.add('correct');
+            } else {
+                resultDiv.textContent = 'Incorrecto. La respuesta correcta es 13/12.';
+                resultDiv.classList.remove('correct');
+                resultDiv.classList.add('incorrect');
+            }
+        }
+
+        function goToIndex() {
+            window.location.href = "/html/grados/6/niveles.html"; // Redirigir al usuario al index
+        }
+
+        function nextLevel() {
+            window.location.href = "./lvl2.html"; // Redirigir al usuario al siguiente nivel
+        }
+    </script>
+</body>
+</html>

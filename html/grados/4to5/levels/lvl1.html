@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 1 (4to-5to grado)</title>
+    <link rel="stylesheet" href="/css/grade/4to5/levels.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 1 (4to-5to grado)</h1>
+        <div class="problem">
+            <h2>Multiplicación</h2>
+            <p>Si una caja contiene 25 paquetes de lápices, y cada paquete tiene un número variable de lápices (entre 5 y 15 lápices), ¿cuál es la cantidad mínima y máxima de lápices que podría haber en total?</p>
+        </div>
+        <div class="problem">
+            <p>Respuesta mínima: <input type="number" id="minAnswer" placeholder="Ingrese su respuesta mínima"></p>
+            <p>Respuesta máxima: <input type="number" id="maxAnswer" placeholder="Ingrese su respuesta máxima"></p>
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const minAnswer = parseInt(document.getElementById('minAnswer').value);
+            const maxAnswer = parseInt(document.getElementById('maxAnswer').value);
+            const minCorrectAnswer = 25 * 5;
+            const maxCorrectAnswer = 25 * 15;
+            const resultDiv = document.getElementById('result');
+            if (minAnswer === minCorrectAnswer && maxAnswer === maxCorrectAnswer) {
+                resultDiv.textContent = '¡Correcto!';
+            } else {
+                resultDiv.textContent = 'Incorrecto. La respuesta correcta es ' + minCorrectAnswer + ' (mínimo) y ' + maxCorrectAnswer + ' (máximo).';
+            }
+        }
+
+        function goToIndex() {
+            window.location.href = "/html/grados/4to5/niveles.html"; // Redirigir al usuario al index
+        }
+
+        function nextLevel() {
+            window.location.href = "/html/grados/4to5/levels/lvl2.html"; // Redirigir al usuario al siguiente nivel
+        }
+    </script>
+</body>
+</html>

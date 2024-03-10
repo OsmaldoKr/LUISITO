@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 2 (6to grado)</title>
+    <link rel="stylesheet" href="../../../../css/grade/6/Lvl2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 2 (6to grado)</h1>
+        <div class="problem">
+            <h2>Probabilidad</h2>
+            <p>En una bolsa hay 10 canicas: 4 son rojas, 3 son verdes, 2 son azules y 1 es amarilla. Si se elige una canica al azar de la bolsa, ¿cuál es la probabilidad de que sea roja?</p>
+        </div>
+        <div class="answer">
+            <input type="text" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const userAnswer = document.getElementById('userAnswer').value;
+            const resultDiv = document.getElementById('result');
+            if (userAnswer.toLowerCase() === '4/10' || userAnswer.toLowerCase() === '2/5' || userAnswer.toLowerCase() === '0.4') {
+                resultDiv.textContent = '¡Correcto!';
+            } else {
+                resultDiv.textContent = 'Incorrecto. La probabilidad de que sea roja es 4/10 o 2/5 o 0.4.';
+            }
+        }
+
+        function nextLevel() {
+            window.location.href = "lvl3.html"; // Cambiar esto por la ruta correcta del próximo nivel
+        }
+
+        function goToIndex() {
+            window.location.href = "../niveles.html"; // Cambiar esto por la ruta correcta del index
+        }
+    </script>
+</body>
+</html>

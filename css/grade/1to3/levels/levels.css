@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #000000; /* Texto más claro */
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/assets/caa2648a1d8dc018d1da295b0207369f.jpg"); /* Fondo de imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 2px #f3f3f3;
+    background-color: #ffa07a; /* Fondo salmón */
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.problem {
+    background-color: #59c4ee; /* Fondo azul claro */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.problem h2 {
+    font-size: 1.5em;
+}
+
+.problem p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    background-color: #bfbfbf; /* Fondo rosa claro */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.5em;
+    background-color: #0099ff; /* Fondo rosa */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700ff; /* Rosa más oscuro al pasar el mouse */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}

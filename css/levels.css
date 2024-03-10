@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive; /* Fuente estilo videojuego */
-    background-image: url(/assets/274281acaf11260330e63684f3944d82.jpg);
+    background-image: url(/assets/907b940262577325c6e58df679554114.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Color de fondo oscuro */
@@ -33,7 +33,7 @@ h1 {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas */
     grid-gap: 10px;
 }
 
@@ -44,7 +44,7 @@ h1 {
 .levels ul li a {
     display: block;
     padding: 10px;
-    background-color: #4CAF50; /* Color de fondo del nivel */
+    background-color: #4ca8ef; /* Color de fondo del nivel */
     color: #fff; /* Color de texto del nivel */
     text-decoration: none;
     border-radius: 4px;
@@ -52,13 +52,13 @@ h1 {
 }
 
 .levels ul li a:hover {
-    background-color: #45a049; /* Cambio de color de fondo al pasar el mouse */
+    background-color: #c8774e; /* Cambio de color de fondo al pasar el mouse */
 }
 
 button {
     padding: 10px 20px;
     font-size: 1.5em;
-    background-color: #ff3d00; /* Color de fondo del botón */
+    background-color: #d86542; /* Color de fondo del botón */
     color: #fff; /* Color de texto del botón */
     border: none;
     border-radius: 4px;

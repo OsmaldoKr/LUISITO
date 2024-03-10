@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 5 (6to grado)</title>
+    <link rel="stylesheet" href="../../../../css/grade/6/Lvl5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 5 (6to grado)</h1>
+        <div class="problem">
+            <h2>Probabilidad y Fracciones</h2>
+            <p>En una urna hay 10 bolas: 3 son rojas, 4 son verdes y 3 son azules. Si se elige una bola al azar de la urna, ¿cuál es la probabilidad de que sea azul o roja?</p>
+        </div>
+        <div class="answer">
+            <input type="text" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="finish()">Finish</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+    // Obtener la respuesta del usuario
+    const userAnswer = document.getElementById('userAnswer').value;
+
+    // Definir la respuesta correcta (en este caso, la probabilidad de que sea azul o roja)
+    const totalBalls = 10;
+    const blueBalls = 3;
+    const redBalls = 3;
+    const probability = (blueBalls + redBalls) / totalBalls;
+
+    // Validar si la respuesta del usuario es correcta
+    if (userAnswer.trim() !== '') {
+        // Convertir la respuesta del usuario a número
+        const userProbability = parseFloat(userAnswer);
+
+        // Verificar si la respuesta del usuario coincide con la probabilidad correcta
+        if (!isNaN(userProbability) && userProbability === probability) {
+            // Mostrar mensaje de respuesta correcta
+            document.getElementById('result').innerText = '¡Respuesta correcta!';
+            document.getElementById('result').classList.add('correct');
+        } else {
+            // Mostrar mensaje de respuesta incorrecta
+            document.getElementById('result').innerText = 'Respuesta incorrecta. Intenta de nuevo.';
+            document.getElementById('result').classList.add('incorrect');
+        }
+    } else {
+        // Mostrar mensaje de error si no se proporciona una respuesta
+        document.getElementById('result').innerText = 'Por favor, ingresa una respuesta.';
+        document.getElementById('result').classList.remove('correct');
+        document.getElementById('result').classList.remove('incorrect');
+    }
+}
+
+
+function finish() {
+            // Aquí puedes realizar cualquier acción necesaria al finalizar el nivel, como mostrar un mensaje de felicitaciones o guardar el progreso del usuario
+            alert("¡Felicidades! Has completado todos los niveles.");
+            // Redirigir al usuario al inicio o a donde desees
+            goToIndex();
+        }
+
+        function goToIndex() {
+            // Redirige al usuario al índice o página principal
+            window.location.href = "../niveles.html";
+        }
+    </script>
+</body>
+</html>

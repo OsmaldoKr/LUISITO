@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisito - Nivel 4 (6to grado)</title>
+    <link rel="stylesheet" href="../../../../css/grade/6/Lvl4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luisito - Nivel 4 (6to grado)</h1>
+        <div class="problem">
+            <h2>Geometría</h2>
+            <p>¿Cuál es el área de un triángulo con base de 8 cm y altura de 6 cm?</p>
+        </div>
+        <div class="answer">
+            <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
+            <button id="calculateBtn" onclick="calculate()">Calcular</button>
+            <div id="result"></div>
+        </div>
+        <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
+        <button id="exitBtn" onclick="goToIndex()">Salir</button>
+    </div>
+
+    <script>
+        function calculate() {
+            const userAnswer = parseFloat(document.getElementById('userAnswer').value);
+            const area = (8 * 6) / 2; // Calcula el área del triángulo
+            const precision = 0.001; // Precisión para comparar las respuestas
+
+            if (Math.abs(userAnswer - area) < precision) {
+                document.getElementById('result').innerText = '¡Respuesta correcta!';
+                document.getElementById('result').className = 'result correct';
+            } else {
+                document.getElementById('result').innerText = 'Respuesta incorrecta. Inténtalo de nuevo.';
+                document.getElementById('result').className = 'result incorrect';
+            }
+        }
+
+        function nextLevel() {
+            // Redirigir al siguiente nivel
+            window.location.href = "lvl5.html";
+        }
+
+        function goToIndex() {
+            // Redirigir al usuario al index
+            window.location.href = "../niveles.html";
+        }
+    </script>
+</body>
+</html>

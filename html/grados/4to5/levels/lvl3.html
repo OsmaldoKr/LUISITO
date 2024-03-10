@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luisito - Nivel 8</title>
-    <link rel="stylesheet" href="../../../../css/grade/1to3/levels/levels.css">
+    <title>Luisito - Nivel 3 (4to-5to grado)</title>
+    <link rel="stylesheet" href="../../../../css/grade/4to5/levels.css">
 </head>
 <body>
     <div class="container">
-        <h1>Luisito - Nivel 8</h1>
+        <h1>Luisito - Nivel 3 (4to-5to grado)</h1>
         <div class="problem">
-            <h2>División</h2>
-            <p>Tienes 24 dulces y quieres compartirlos equitativamente entre 6 amigos. ¿Cuántos dulces le tocan a cada amigo?</p>
+            <h2>Multiplicación</h2>
+            <p>Si una granja tiene 7 estanques de peces y cada estanque contiene 35 peces, ¿cuántos peces hay en total?</p>
         </div>
         <div class="problem">
-            <p>24 ÷ 6 =</p>
+            <p>Respuesta:</p>
             <input type="number" id="userAnswer" placeholder="Ingrese su respuesta">
             <button id="calculateBtn" onclick="calculate()">Calcular</button>
             <div id="result"></div>
@@ -22,11 +22,10 @@
         <button id="nextBtn" onclick="nextLevel()">Siguiente Nivel</button>
         <button id="exitBtn" onclick="goToIndex()">Salir</button>
     </div>
-
     <script>
         function calculate() {
             const userAnswer = parseInt(document.getElementById('userAnswer').value);
-            const correctAnswer = 24 / 6;
+            const correctAnswer = 7 * 35;
             const resultDiv = document.getElementById('result');
             if (userAnswer === correctAnswer) {
                 resultDiv.textContent = '¡Correcto!';
@@ -36,11 +35,11 @@
         }
 
         function goToIndex() {
-            window.location.href = "/html/grados/1to3/niveles.html"; // Redirigir al usuario al index
+            window.location.href = "../niveles.html"; // Redirigir al usuario al índice
         }
 
         function nextLevel() {
-            window.location.href = "/html/grados/1to3/levels/lvl9.html"; // Redirigir al usuario al siguiente nivel
+            window.location.href = "lvl4.html"; // Redirigir al usuario al siguiente nivel
         }
     </script>
 </body>
