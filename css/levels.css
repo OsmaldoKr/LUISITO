@@ -57,6 +57,7 @@ h1 {
 
 button {
     padding: 10px 20px;
+    margin: 10px;
     font-size: 1.5em;
     background-color: #d86542; /* Color de fondo del botón */
     color: #fff; /* Color de texto del botón */
